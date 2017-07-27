@@ -11,9 +11,23 @@ Full documentation with [github wiki](https://github.com/moderngpu/moderngpu/wik
 2.12 2016 June 8 -
   Fixed problem in load_two_streams_reg when loading from unaligned types.
 ```
----
-moderngpu is a productivity library for general-purpose computing on GPUs. It is a header-only C++ library written for CUDA. The unique value of the library is in its accelerated primitives for solving irregularly parallel problems. 
 
+---
+## Intent
+```
+moderngpu is a productivity library for general-purpose computing on GPUs. It is a header-only C++ library written for CUDA. The unique value of the library is in its accelerated primitives for solving irregularly parallel problems. 
+```
+
+---
+## Build
+```
+	NOTE: For now, use gcc 4.9 via nvcc (as other versions may complain about #include
+	syntax issues with avx512vlintrin.h).
+
+make (all output is directed to the bin folder).
+```
+
+---
 ## Release notes
 ```
 2.11 2016 June 6 -
@@ -83,6 +97,7 @@ moderngpu is a productivity library for general-purpose computing on GPUs. It is
   moderngpu chooses to redefine its constexpr functions as macros, injecting
   them into the global scope. Sorry!
 
+  TODO: Make this gcc >4.9 compile ready.
   TODO: Complete kernel unit tests. 
   TODO: API references.
   TODO: Multiset operations for feature parity with moderngpu 1.0.

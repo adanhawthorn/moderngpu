@@ -241,7 +241,7 @@ compute_distances(const int* cities_per_state, const float2* city_pos,
 int main(int argc, char** argv) {
   // Load the CSV database file.
   state_city_t db;
-  db.process("demo/statecity.csv");
+  db.process("statecity.csv");
 
   printf("%d cities from %d states loaded.\n", 
     (int)db.cities.size(), (int)db.states.size());
